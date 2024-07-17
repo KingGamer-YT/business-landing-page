@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+       <style>
+  .pricing {
+    font-family: Arial, sans-serif;
+    background-color: #1f2937;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pricing-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    padding: 30px;
+    width: 220px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.standard {
+    background-color: #3b82f6;
+    color: #ffffff;
+    width: 240px;
+    height: 440px;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    z-index: 1;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.card > p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.price sup {
+    font-size: 24px;
+    top: -0.5em;
+}
+
+.price span {
+    font-size: 14px;
+    display: block;
+    font-weight: normal;
+}
+
+.features {
+    text-align: center;
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+.feature {
+    margin: 10px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.card.standard .feature {
+    color: #e5e7eb;
+}
+
+.order-btn {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.order-btn:hover {
+    background-color: #2563eb;
+}
+
+.card.standard .order-btn {
+    background-color: #ffffff;
+    color: #3b82f6;
+}
+
+.card.standard .order-btn:hover {
+    background-color: #f3f4f6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card.standard {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .price {
+        font-size: 36px;
+    }
+
+    .price sup {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 20px;
+        height: auto;
+    }
+
+    .card.standard {
+        padding: 20px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+    </style>
+    <header>
+        <nav>
+            <div class="logo">FIGMA LAND</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="#">Sign in</a>
+                <a href="#">Sign up</a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>The best products start with Figma</h1>
+                <p>Most calendars are designed for teams. Slate is designed for freelancers.</p>
+                <a href="#" class="btn-primary">Try for Free</a>
+            </div>
+        </section>
+        
+        <section class="features">
+            <h2>Features</h2>
+            <p class="features-description">Most calendars are designed for teams. Slate is designed for freelancers.</p>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <i class="bi bi-pencil-square"></i>
+                    <h3>OpenType features</h3>
+                    <p>Freelance designers are in high demand. Slate helps you keep up.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-bar-chart"></i>
+                    <h3>Performance analyzer</h3>
+                    <p>Track your design performance and improve with detailed analytics.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-collection"></i>
+                    <h3>Template collections</h3>
+                    <p>Get access to a vast collection of design templates to speed up your workflow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <div class="video-container">
+                <img src="./image/video.png" alt="Video Image">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="play-button" target="_blank">
+                    <i class="bi bi-play-circle"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="showcase">
+            <div class="showcase-content">
+                <div class="showcase-text">
+                    <h2>Fastest way to organize</h2>
+                    <p>Most calendars are designed for teams. Slate is designed for freelancers.</p>
+                    <a href="#" class="btn-primary" >Try for Free</a>    
+                </div>
+                <img src="./image/scr.png" alt="Showcase Image" class="showcase-image">
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="cta-content">
+                <img src="./image/content.png" alt="CTA Image" class="cta-image">
+                <div class="cta-text">
+                    <h2>At your fingertips</h2>
+                    <h1>Lightning fast prototyping</h1>
+                    <p class="subs">subscribe to our Newsletter</p>
+                    <p style="color: #6c757d;">Available exclusively on Figmaland</p>
+                  <div class="btn-grp">
+                    <div class="btn">Your Email</div>
+                    <div class="btn2">
+                        Subscribe
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <h2>Partners</h2>
+            <p class="partners-description">Most calendars are designed for teams. Slate is designed for freelancers.</p>
+            <div class="partner-logos">
+                <img src="./image/logos_google (1).png" alt="Google">
+                <img src="./image/Rectangle.png" alt="Amazon">
+                <img src="image/Rectangle (1).png" alt="Microsoft">
+            </div>
+            <a href="#" class="btn-primary">Try For Free</a>
+        </section>       
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <p class="testimonial-description">Most calendars are designed for teams. Slate is designed for freelancers.</p>
+            <div class="testimonial-logo">
+                <img src="image/logos_ibm (1).png" alt="IBM">
+            </div>
+            <div class="testimonial-review">
+                <p>“Slate helps you see how many more days you need to work to reach your financial goal for the month and year.”</p>
+                <div class="reviewer-info">
+                    <img src="./image/Ellipse 2.png" alt="Reviewer Image">
+                    <p>Theresa Webb, Freelancer</p>
+                </div>
+            </div>
+            <a href="#" class="btn-primary">More Testimonials</a>
+        </section>
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="pricing">
+            <div class="pricing-container">
+                <h1>Pricing</h1>
+                <p class="subtitle">Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
+                <div class="pricing-cards">
+                    <div class="card">
+                        <h2>FREE</h2>
+                        <p>Organize across all apps by hand</p>
+                        <div class="price">0<sup>$</sup> <span>Per Month</span></div>
+                        <div class="featur">
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                        </div>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="card standard">
+                        <h2>STANDARD</h2>
+                        <p>Organize across all apps by hand</p>
+                        <div class="price">10<sup>$</sup> <span>Per Month</span></div>
+                        <div class="featur">
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                        </div>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="card">
+                        <h2>BUSINESS</h2>
+                        <p>Organize across all apps by hand</p>
+                        <div class="price">99<sup>$</sup> <span>Per Month</span></div>
+                        <div class="featur">
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                            <div class="feature">Pricing Feature</div>
+                        </div>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="contact-us">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+            <div class="content">
+                <div class="contact-form">
+                    <h3>Contact Us</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <textarea placeholder="Your Message"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <p><i class="icon bi bi-geo-alt"></i> 6386 Spring St undefined Anchorage, Georgia 12473 United States</p>
+                    <p><i class="icon bi bi-telephone"></i> (843) 555-0130</p>
+                    <p><i class="icon bi bi-envelope"></i> willie.jennings@example.com</p>
+                    <img src="image/static_map.png" alt="Map" class="map">
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="icon"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+    </main>
+    <footer>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Footer Replica</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <footer>
+                <div class="container">
+                    <div class="column">
+                        <h4>Pages</h4>
+                        <ul>
+                            <li>Home</li>
+                            <li>Product</li>
+                            <li>Pricing</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>Tomothy</h4>
+                        <ul>
+                            <li>Eleanor Edwards</li>
+                            <li>Ted Robertson</li>
+                            <li>Annette Russell</li>
+                            <li>Jennie Mckinney</li>
+                            <li>Gloria Richards</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>Jane Black</h4>
+                        <ul>
+                            <li>Philip Jones</li>
+                            <li>Product</li>
+                            <li>Colleen Russell</li>
+                            <li>Marvin Hawkins</li>
+                            <li>Bruce Simmmons</li>
+                        </ul>
+                    </div>
+                    <div class="contact-info">
+                        <p>7480 Mockingbird Hill undefined</p>
+                        <p>(239) 555-0108</p>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="icon"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="icon"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </body>
+        </html>
+        
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const authLinks = document.querySelector('.auth-links');
+
+    hamburgerMenu.addEventListener('click', function() {
+        hamburgerMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        authLinks.classList.toggle('active');
+    });
+});
+    </script>
+    
+</body>
+</html>
